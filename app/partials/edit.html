@@ -1,0 +1,24 @@
+<div ng-controller="EditProjectCtrl">
+	<form class="form-horizontal">
+		<h1 class="page-header">Edit Project({{project.id}})</h1>
+		<fieldset>
+			<div class="control-group">
+				<label class="control-label" for="title">Name</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="project.name"></input>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="title">Description</label>
+				<div class="controls">
+					<input id="title" type="text" class="input-block-level"
+						required="true" ng-model="project.description"></input>
+				</div>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<button ng-click="updateProject()" class="btn btn-primary">Update Project</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,34 @@
+<div ng-controller="ProjectListCtrl">
+    <h1 class="page-header">Projects List</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="25px">ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th width="50px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="project in projects">
+                <td>{{project.id}}</td>
+                <td>{{project.name}}</td>
+                <td>{{project.description}}</td>
+                <!-- ng-show="user.id &&user.id==e.user_id" -->
+                <td><a ng-click="editProject($index)" ><i
+                            class="icon-pencil"></i>
+                    </a>
+                    &nbsp;
+                    <a ng-click="delProject($index)" ><i
+                            class="icon-remove-circle"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+<!-- ng-show="user.username" -->
+    <p>
+        <button type="button" class="btn btn-success"
+                ng-click="addProject()">
+            <b class="icon-plus-sign"></b>Add Project
+        </button>
+    </p>
+</div>
